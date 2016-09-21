@@ -25,11 +25,14 @@ class App extends Component {
   }
 
   randomizeTheme = () => {
-    const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+    const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'gray', 'white', 'black'];
     const hotTheme = {
       ...this.state.hotTheme,
       $darkGray: _.sample(colors),
-      $mediumGray: _.sample(colors)
+      $mediumGray: _.sample(colors),
+      $primaryColor: _.sample(colors),
+      $secondaryColor: _.sample(colors),
+      $tertiaryColor: _.sample(colors)
     };
     this.setState({ hotTheme });
   };
