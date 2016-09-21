@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './App.scss';
+import styles from './App.scss';
 import { fetchTodos } from '../../api/api';
 import { TodosList } from '../';
 
@@ -32,7 +32,7 @@ class App extends Component {
   render() {
     const { todos } = this.state;
     return (
-      <div id="react-modular-ui-series">
+      <div className={styles.app}>
         <TodosList todos={todos}
                    toggleTodo={this.toggleTodo} />
       </div>

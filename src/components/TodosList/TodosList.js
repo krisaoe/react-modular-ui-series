@@ -1,11 +1,11 @@
 import { noop } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 
-import './TodosList.scss';
+import styles from './TodosList.scss';
 import { TodosListItem } from '../';
 
 const TodosList = ({ todos, toggleTodo }) => (
-  <ul className="todos-list">
+  <ul className={styles.todosList}>
     {todos.map((todo, i) => (
       <TodosListItem key={i}
                     todo={todo}

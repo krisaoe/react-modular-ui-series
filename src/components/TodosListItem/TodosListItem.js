@@ -2,11 +2,11 @@ import className from 'classname';
 import { noop } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 
-import './TodosListItem.scss';
+import styles from './TodosListItem.scss';
 
 const _getTodoItemClass = todo => className(
-  'todos-list-item',
-  { completed: todo.completed }
+  styles.todosListItem,
+  { [styles.completed]: todo.completed }
 );
 
 const TodosListItem = ({ todo, toggleTodo }) => (

@@ -1,11 +1,9 @@
 @import '../scss/main';
 
-##{$APP} {
-  .todos-list {
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
-    max-width: 900px;
-  }
+.todosList {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  max-width: 900px;
 }
