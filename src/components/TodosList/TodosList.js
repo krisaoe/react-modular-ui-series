@@ -1,12 +1,14 @@
 import { noop } from 'lodash';
 import Radium from 'radium';
 import React, { Component, PropTypes } from 'react';
+import { compose } from 'redux';
+import { applyThemeWrap } from 'theme-wrap';
 
 import styles from './TodosList.styles';
 import { TodosListItem } from '../';
 
-const TodosList = ({ todos, toggleTodo }) => (
-  <ul style={styles.todosList}>
+const TodosList = ({ todos, toggleTodo, twStyles }) => (
+  <ul style={twStyles.todosList}>
     {todos.map((todo, i) => (
       <TodosListItem key={i}
                     todo={todo}
@@ -25,4 +27,7 @@ TodosList.propTypes = {
   toggleTodo: PropTypes.func
 };
 
-export default Radium(TodosList);
+export default compose(
+  applyThemeWrap(styles),
+  Radium
+)(TodosList);

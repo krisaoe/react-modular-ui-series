@@ -1,7 +1,6 @@
-import theme from '../styles/theme';
-
-export default {
+export default (theme, props, mixins) => ({
   todosListItem: {
+    ...mixins.get('largeBorders'),
     background: 'white',
     borderRadius: '10px',
     color: 'black',
@@ -18,10 +17,9 @@ export default {
   },
 
   completed: {
+    ...mixins.get('mobileFriendly'),
     transition: '0.5s ease',
     background: theme.$darkGray,
-    color: 'white',
-    fontSize: '12px',
     padding: '10px 0',
   }
-};
+});

@@ -1,7 +1,10 @@
 import { Style, StyleRoot } from 'radium';
 import normalize from 'radium-normalize';
 import React, { Component } from 'react';
+import { ThemeWrapProvider } from 'theme-wrap';
 
+import theme from '../styles/theme';
+import mixins from '../styles/mixins';
 import styles from './App.styles';
 import { fetchTodos } from '../../api/api';
 import { TodosList } from '../';
@@ -11,7 +14,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: []
+      todos: [],
+      hotTheme: theme
     };
   }
 
@@ -19,6 +23,16 @@ class App extends Component {
     fetchTodos(20)
       .then(todos => this.setState({ todos }));
   }
+
+  randomizeTheme = () => {
+    const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+    const hotTheme = {
+      ...this.state.hotTheme,
+      $darkGray: _.sample(colors),
+      $mediumGray: _.sample(colors)
+    };
+    this.setState({ hotTheme });
+  };
 
   toggleTodo = (e, id) => {
     e.preventDefault();
@@ -28,18 +42,25 @@ class App extends Component {
         ? !todo.completed
         : todo.completed
     }));
-    this.setState({ todos: updatedTodos});
+    this.setState({ todos: updatedTodos });
   };
 
   render() {
-    const { todos } = this.state;
+    const { todos, hotTheme } = this.state;
     return (
       <StyleRoot>
-        <Style rules={normalize} />
-        <div style={styles.app}>
-          <TodosList todos={todos}
-                     toggleTodo={this.toggleTodo} />
-        </div>
+        <ThemeWrapProvider theme={hotTheme}
+                           mixins={mixins}>
+          <Style rules={normalize} />
+          <div style={styles.app}>
+            <button onClick={this.randomizeTheme}>
+              Randomize Theme
+            </button>
+
+            <TodosList todos={todos}
+                       toggleTodo={this.toggleTodo} />
+          </div>
+        </ThemeWrapProvider>
       </StyleRoot>
     );
   }

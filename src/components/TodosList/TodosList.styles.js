@@ -1,6 +1,4 @@
-import theme from '../styles/theme';
-
-export default {
+export default (theme, props, mixins) => ({
   todosList: {
     margin: '0 auto',
     overflow: 'hidden',
@@ -8,4 +6,4 @@ export default {
     textAlign: 'center',
     maxWidth: '900px',
   }
-};
+});
