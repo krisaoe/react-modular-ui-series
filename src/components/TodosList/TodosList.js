@@ -1,4 +1,5 @@
 import { noop } from 'lodash';
+import Radium from 'radium';
 import React, { Component, PropTypes } from 'react';
 
 import styles from './TodosList.styles';
@@ -24,4 +25,4 @@ TodosList.propTypes = {
   toggleTodo: PropTypes.func
 };
 
-export default TodosList;
+export default Radium(TodosList);

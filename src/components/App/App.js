@@ -1,3 +1,5 @@
+import { Style, StyleRoot } from 'radium';
+import normalize from 'radium-normalize';
 import React, { Component } from 'react';
 
 import styles from './App.styles';
@@ -32,10 +34,13 @@ class App extends Component {
   render() {
     const { todos } = this.state;
     return (
-      <div style={styles.app}>
-        <TodosList todos={todos}
-                   toggleTodo={this.toggleTodo} />
-      </div>
+      <StyleRoot>
+        <Style rules={normalize} />
+        <div style={styles.app}>
+          <TodosList todos={todos}
+                     toggleTodo={this.toggleTodo} />
+        </div>
+      </StyleRoot>
     );
   }
 }

@@ -11,17 +11,14 @@ export default {
     padding: '40px 0',
     transition: '0.5s ease',
 
-    // inline styles out of the box don't support pseudo-selector,
-    // media queries, advanced CSS.
-
-    // features, etc.
-    // '&:hover': {
-    //   background: theme.$mediumGray,
-    //   color: 'white',
-    // }
+    ':hover': {
+      background: theme.$mediumGray,
+      color: 'white',
+    }
   },
 
   completed: {
+    transition: '0.5s ease',
     background: theme.$darkGray,
     color: 'white',
     fontSize: '12px',
