@@ -6,6 +6,15 @@
 3. **Run the setup script**. `npm run setup`
 4. **Run the app**. `npm start -s`
 
+## Lessons
+1. [Basic App with CSS](https://github.com/FarhadG/react-modular-ui-series/tree/part-1-css)
+2. [Revisit the app with SCSS](https://github.com/FarhadG/react-modular-ui-series/tree/part-2-scss)
+3. [Introduction to CSS Modules](https://github.com/FarhadG/react-modular-ui-series/tree/part-3-css-modules)
+4. [CSS Modules Enhanced](https://github.com/FarhadG/react-modular-ui-series/tree/part-4-css-modules-enhanced)
+5. [Introduction to Inline Styles](https://github.com/FarhadG/react-modular-ui-series/tree/part-5-inline-styles)
+6. [Inline Styles Enhanced](https://github.com/FarhadG/react-modular-ui-series/tree/part-6-inline-styles-enhanced)
+7. [Inline Styles Advanced](https://github.com/FarhadG/react-modular-ui-series/tree/part-7-inline-styles-advanced)
+
 ##Initial Machine Setup
 1. **Install [Node 4.0.0 or greater](https://nodejs.org)** - (5.0 or greater is recommended for optimal build performance). Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm).
 2. **Install [Git](https://git-scm.com/downloads)**. 
