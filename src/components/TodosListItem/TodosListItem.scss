@@ -1,6 +1,6 @@
 @import '../scss/main';
 
-.todosListItem {
+.todos-list-item {
   background: white;
   border-radius: 10px;
   color: black;
@@ -17,6 +17,7 @@
 }
 
 .completed {
+  composes: todos-list-item;
   background: $dark-gray;
   color: white;
   font-size: 12px;

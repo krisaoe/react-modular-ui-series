@@ -1,11 +1,11 @@
 import { noop } from 'lodash';
 import React, { Component, PropTypes } from 'react';
+import CSSModules from 'react-css-modules';
 
-import styles from './TodosList.scss';
 import { TodosListItem } from '../';
 
 const TodosList = ({ todos, toggleTodo }) => (
-  <ul className={styles.todosList}>
+  <ul styleName="todos-list">
     {todos.map((todo, i) => (
       <TodosListItem key={i}
                     todo={todo}
@@ -24,4 +24,6 @@ TodosList.propTypes = {
   toggleTodo: PropTypes.func
 };
 
-export default TodosList;
+export default CSSModules(
+  require('./TodosList.scss')
+)(TodosList);
