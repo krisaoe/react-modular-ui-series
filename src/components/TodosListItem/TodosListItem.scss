@@ -1,0 +1,26 @@
+@import '../scss/main';
+
+##{$APP} {
+  .todos-list-item {
+    background: white;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 40px 0;
+    transition: 0.5s ease;
+
+    &:hover {
+      background: $medium-gray;
+      color: white;
+    }
+
+    &.completed {
+      background: $dark-gray;
+      color: white;
+      font-size: 12px;
+      padding: 10px 0;
+    }
+  }
+}

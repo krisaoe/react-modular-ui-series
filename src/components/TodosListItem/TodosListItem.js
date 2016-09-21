@@ -2,7 +2,7 @@ import className from 'classname';
 import { noop } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 
-import './TodosListItem.css';
+import './TodosListItem.scss';
 
 const _getTodoItemClass = todo => className(
   'todos-list-item',

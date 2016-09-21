@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 
-import './TodosList.css';
+import './TodosList.scss';
 import { TodosListItem } from '../';
 
 const TodosList = ({ todos, toggleTodo }) => (
