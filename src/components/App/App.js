@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CSSModules from 'react-css-modules';
 
+import styles from './App.styles';
 import { fetchTodos } from '../../api/api';
 import { TodosList } from '../';
 
@@ -32,7 +32,7 @@ class App extends Component {
   render() {
     const { todos } = this.state;
     return (
-      <div styleName="app">
+      <div style={styles.app}>
         <TodosList todos={todos}
                    toggleTodo={this.toggleTodo} />
       </div>
@@ -40,6 +40,4 @@ class App extends Component {
   }
 }
 
-export default CSSModules(
-  require('./App.scss')
-)(App);
+export default App;

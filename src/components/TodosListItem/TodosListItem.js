@@ -1,13 +1,14 @@
 import { noop } from 'lodash';
 import React, { Component, PropTypes } from 'react';
-import CSSModules from 'react-css-modules';
+
+import styles from './TodosListItem.styles';
 
 const _getTodoItemClass = todo => todo.completed
-  ? 'completed'
-  : 'todos-list-item';
+  ? styles.completed
+  : styles.todosListItem;
 
 const TodosListItem = ({ todo, toggleTodo }) => (
-  <li styleName={_getTodoItemClass(todo)}
+  <li style={_getTodoItemClass(todo)}
       onClick={(e) => toggleTodo(e, todo.id)}>
     {todo.description}
   </li>
@@ -23,6 +24,4 @@ TodosListItem.propTypes = {
   toggleTodo: PropTypes.func
 };
 
-export default CSSModules(
-  require('./TodosListItem.scss')
-)(TodosListItem);
+export default TodosListItem;
