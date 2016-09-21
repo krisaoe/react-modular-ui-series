@@ -4,38 +4,11 @@ import './App.css';
 import { fetchTodos } from '../../api/api';
 import { TodosList } from '../';
 
-class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: []
-    };
-  }
-
-  componentDidMount() {
-    fetchTodos(20)
-      .then(todos => this.setState({ todos }));
-  }
-
-  toggleTodo = (e, id) => {
-    e.preventDefault();
-    const updatedTodos = this.state.todos.map(todo => ({
-      ...todo,
-      completed: (todo.id === id)
-        ? !todo.completed
-        : todo.completed
-    }));
-    this.setState({ todos: updatedTodos});
-  };
-
-  render() {
-    const { todos } = this.state;
-    return (
-      <TodosList todos={todos}
-                 toggleTodo={this.toggleTodo} />
-    );
-  }
-}
+const App = () => (
+  <div>
+    <h1>HELLO, WORLD!</h1>
+    <p>Please review docs and the various for the lessons on styling React component.</p>
+  </div>
+);
 
 export default App;
