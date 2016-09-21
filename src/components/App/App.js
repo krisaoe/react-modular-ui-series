@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import { fetchTodos } from '../../api/api';
-import { TodosList } from '../';
 
 const App = () => (
   <div>
