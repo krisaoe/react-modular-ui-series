@@ -32,7 +32,7 @@
 
 ##Technologies
 
-| **Tech** | **Description** |**Learn More**|
+| **Tech** | **Description** |
 |----------|-------|---|
 | [React](https://facebook.github.io/react/)  |   Fast, composable client-side components.    |
 | [Redux](http://redux.js.org) |  Enforces unidirectional data flows and immutable, hot reloadable store. Supports time-travel debugging. Lean alternative to [Facebook's Flux](https://facebook.github.io/flux/docs/overview.html).|
